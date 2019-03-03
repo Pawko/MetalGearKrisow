@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tlo
+    uniqueID: 2698196157
+    locked: 0
+  - name: Drugi plan
+    uniqueID: 929968709
+    locked: 0
+  - name: Gracz
+    uniqueID: 1506836335
+    locked: 0
