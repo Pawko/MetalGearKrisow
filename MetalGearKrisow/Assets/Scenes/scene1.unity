@@ -179,7 +179,7 @@ Transform:
   m_LocalScale: {x: 1.0263441, y: 1.0263441, z: 1.0263441}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227211906
 GameObject:
@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 2361796761814300394, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
       propertyPath: m_Name
-      value: platform (1)
+      value: platform2
       objectReference: {fileID: 0}
     - target: {fileID: 1854902868830271053, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
@@ -409,7 +409,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1315238893
 GameObject:
@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 1315238894}
   - component: {fileID: 1315238897}
   - component: {fileID: 1315238898}
+  - component: {fileID: 1315238899}
   m_Layer: 0
   m_Name: Girl
   m_TagString: Untagged
@@ -512,7 +513,7 @@ Transform:
   m_LocalScale: {x: 0.40867448, y: 0.40867448, z: 0.40867448}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1315238897
 BoxCollider2D:
@@ -559,6 +560,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1315238899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315238893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21857147f0028241be27447011bc799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1562163126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -569,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 2361796761814300394, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
       propertyPath: m_Name
-      value: platform (2)
+      value: platform3
       objectReference: {fileID: 0}
     - target: {fileID: 1854902868830271053, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
@@ -609,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 1854902868830271053, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1854902868830271053, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
@@ -638,7 +651,7 @@ PrefabInstance:
     - target: {fileID: 2361796761814300394, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
       propertyPath: m_Name
-      value: platform
+      value: platform1
       objectReference: {fileID: 0}
     - target: {fileID: 1854902868830271053, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
@@ -678,7 +691,7 @@ PrefabInstance:
     - target: {fileID: 1854902868830271053, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1854902868830271053, guid: 4c02f1a9eb5033549a6a32757fa9c9e2,
         type: 3}
