@@ -16,7 +16,7 @@ public class FollowingHero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 cameraPosition = new Vector3(hero.transform.position.x, hero.transform.position.y, transform.position.z);
+        Vector3 cameraPosition = new Vector3(hero.transform.position.x, transform.position.y, transform.position.z);
 
         transform.position = Vector3.SmoothDamp(transform.position, cameraPosition, ref currVelocity, smoothTime);
     }
