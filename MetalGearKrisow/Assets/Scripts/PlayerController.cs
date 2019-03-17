@@ -4,10 +4,15 @@ public class PlayerController : MonoBehaviour
 {
     public float PlayerSpeed;
     public float PlayerJumpForce;
+    public Transform GroundDetector;
+    public LayerMask LayerMask;
 
     private Animator Animator;
     private Rigidbody2D Rigidbody2D;
     private bool IsDirectionToRight = true;
+    private bool IsOnTheGround;
+    private float Radius = 0.1f;
+
     
     // Start is called before the first frame update
     void Start()
@@ -19,10 +24,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        IsOnTheGround = Physics2D.OverlapCircle(GroundDetector.position, Radius, LayerMask);
         float horizontalMove = Input.GetAxis("Horizontal");
         Rigidbody2D.velocity = new Vector2(horizontalMove * PlayerSpeed, Rigidbody2D.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (IsOnTheGround && Input.GetKeyDown(KeyCode.Space))
         {
             Rigidbody2D.AddForce(new Vector2(0, PlayerJumpForce));
             Animator.SetTrigger("jump");
