@@ -3,6 +3,7 @@
 public class PlayerController : MonoBehaviour
 {
     public float PlayerSpeed;
+    public float PlayerJumpForce;
 
     private Animator Animator;
     private Rigidbody2D Rigidbody2D;
@@ -20,6 +21,12 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalMove = Input.GetAxis("Horizontal");
         Rigidbody2D.velocity = new Vector2(horizontalMove * PlayerSpeed, Rigidbody2D.velocity.y);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Rigidbody2D.AddForce(new Vector2(0, PlayerJumpForce));
+            Animator.SetTrigger("jump");
+        }
 
         Animator.SetFloat("speed", Mathf.Abs(horizontalMove));
 
