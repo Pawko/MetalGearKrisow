@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FailCactusController : MonoBehaviour
 {
-    public Transform startPoint;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class FailCactusController : MonoBehaviour
     {
         if (other.gameObject.name == "Girl")
         {
-            other.transform.position = startPoint.position;
+            other.gameObject.GetComponent<Animator>().SetTrigger("fail");
         }
     }
 }

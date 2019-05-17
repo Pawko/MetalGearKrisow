@@ -3177,6 +3177,7 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 55
+  startPoint: {fileID: 1424220763}
 --- !u!1 &1329736629
 GameObject:
   m_ObjectHideFlags: 0
@@ -4351,7 +4352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37010e673f12de42a9c186baaad53a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 1424220763}
 --- !u!212 &2016149881
 SpriteRenderer:
   m_ObjectHideFlags: 0

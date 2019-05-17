@@ -12,8 +12,9 @@ public class PlayerController : MonoBehaviour
     private bool IsDirectionToRight = true;
     private bool IsOnTheGround;
     private float Radius = 0.1f;
+    public Transform startPoint;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,5 +53,10 @@ public class PlayerController : MonoBehaviour
         Vector3 playerScale = gameObject.transform.localScale;
         playerScale.x *= -1;
         gameObject.transform.localScale = playerScale;
+    }
+
+    public void RestartPlayer()
+    {
+        gameObject.transform.position = startPoint.position;
     }
 }
