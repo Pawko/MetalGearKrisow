@@ -3402,7 +3402,7 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 55
-  startPoint: {fileID: 0}
+  startPoint: {fileID: 1424220763}
 --- !u!1 &1329736629
 GameObject:
   m_ObjectHideFlags: 0
