@@ -25,6 +25,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Animator.GetCurrentAnimatorStateInfo(0).IsName("cactus_hit"))
+        {
+            Rigidbody2D.velocity = Vector2.zero;
+            return;
+        }
+
         IsOnTheGround = Physics2D.OverlapCircle(GroundDetector.position, Radius, LayerMask);
         float horizontalMove = Input.GetAxis("Horizontal");
         Rigidbody2D.velocity = new Vector2(horizontalMove * PlayerSpeed, Rigidbody2D.velocity.y);
