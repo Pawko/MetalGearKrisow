@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool IsOnTheGround;
     private float Radius = 0.1f;
     public Transform startPoint;
+    public AudioClip clip;
 
 
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             Rigidbody2D.AddForce(new Vector2(0, PlayerJumpForce));
             Animator.SetTrigger("jump");
+            AudioSource.PlayClipAtPoint(clip, transform.position);
         }
 
         Animator.SetFloat("speed", Mathf.Abs(horizontalMove));

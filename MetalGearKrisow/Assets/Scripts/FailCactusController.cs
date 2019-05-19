@@ -5,7 +5,7 @@ using UnityEngine;
 public class FailCactusController : MonoBehaviour
 {
 
-
+    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +17,7 @@ public class FailCactusController : MonoBehaviour
         if (other.gameObject.name == "Girl")
         {
             other.gameObject.GetComponent<Animator>().SetTrigger("fail");
+            AudioSource.PlayClipAtPoint(clip, transform.position);
         }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1552464577074420334}
   - component: {fileID: 1552464577074420333}
   m_Layer: 0
-  m_Name: Cactus (1)
+  m_Name: Cactus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552464577074420322}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5657635, y: -0.9049244, z: 0.021002125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37010e673f12de42a9c186baaad53a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: c17f38f8e7b5f4a1495fda840fbe7ccc, type: 3}

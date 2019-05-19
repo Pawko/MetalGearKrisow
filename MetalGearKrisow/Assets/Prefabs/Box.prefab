@@ -119,3 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240ac18b079a2b847a957e816daa61da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: ad03aba1a1583422b87a3966c8f741d3, type: 3}
+  particlesPrefab: {fileID: 7917720452864062212, guid: ee7d756f9bd4a224ba2b0c4a8405e4bd,
+    type: 3}
