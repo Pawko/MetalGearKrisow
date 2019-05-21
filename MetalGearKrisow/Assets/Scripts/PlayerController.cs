@@ -67,4 +67,8 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.transform.position = startPoint.position;
     }
+    public void OnBecameInvisible()
+    {
+        RestartPlayer();
+    }
 }
