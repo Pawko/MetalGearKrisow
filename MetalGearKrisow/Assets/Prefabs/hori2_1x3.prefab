@@ -89,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1910195037237747951}
   - component: {fileID: 2927832265324359593}
+  - component: {fileID: 6513509163923558259}
   m_Layer: 0
   m_Name: hori2_1x3
   m_TagString: Untagged
@@ -124,7 +125,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.0059541464, y: 0.00000029802322}
   m_SpriteTilingProperty:
@@ -139,6 +140,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.702768, y: 1.2381301}
   m_EdgeRadius: 0
+--- !u!251 &6513509163923558259
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923921335109850570}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &3510290633133071266
 GameObject:
   m_ObjectHideFlags: 0

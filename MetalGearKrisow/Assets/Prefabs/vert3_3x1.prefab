@@ -89,8 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5197156303882371734}
   - component: {fileID: 5668065379780214860}
+  - component: {fileID: 8027255621239180024}
   m_Layer: 0
-  m_Name: vert3_1x3
+  m_Name: vert3_3x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +125,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.017945766}
   m_SpriteTilingProperty:
@@ -139,6 +140,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2153511, y: 3.7397432}
   m_EdgeRadius: 0
+--- !u!251 &8027255621239180024
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229104562147772400}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &2403401265074885198
 GameObject:
   m_ObjectHideFlags: 0
