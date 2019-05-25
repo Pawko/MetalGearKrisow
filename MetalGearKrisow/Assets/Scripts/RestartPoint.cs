@@ -21,6 +21,7 @@ public class RestartPoint : MonoBehaviour
         {
             restartPointsManager.UpdateStartPoint(this.gameObject.transform);
             spriteRenderer.color = new Color(0.3f, 0.8f, 0.6f);
+            this.GetComponent<Collider2D>().enabled = false;
         }
 
     }
