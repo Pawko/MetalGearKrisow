@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelsManager : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class LevelsManager : MonoBehaviour
         
     }
 
-    public void NextLevel()
+    public void NextLevel(string levelName)
     {
-        // TODO
+        SceneManager.LoadScene(levelName);
     }
 }

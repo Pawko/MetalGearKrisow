@@ -4,10 +4,11 @@ public class LevelCompletePoint : MonoBehaviour
 {
     private LevelsManager levelsManager;
     private SpriteRenderer spriteRenderer;
+    public string levelName;
 
     void Start()
     {
-        levelsManager = GameObject.Find("LevelsManager").GetComponent<LevelsManager>();
+        levelsManager = GameObject.Find("Manager").GetComponent<LevelsManager>();
         if (levelsManager == null)
         {
             Debug.LogError("LevelsManager is null.");
@@ -19,7 +20,7 @@ public class LevelCompletePoint : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            levelsManager.NextLevel();
+            levelsManager.NextLevel(levelName);
             this.GetComponent<Collider2D>().enabled = false;
         }
 
