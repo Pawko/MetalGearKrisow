@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CounterController : MonoBehaviour
 {
-    int numberOfBoxes;
+    public int totalNumberOfBoxes;
     public Text counterView;
+    private int numberOfBoxes;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,17 @@ public class CounterController : MonoBehaviour
     public void IncrementCounter()
     {
         numberOfBoxes++;
-        counterView.text = numberOfBoxes.ToString();
+        counterView.text = $"{numberOfBoxes} / {totalNumberOfBoxes}";
     }
+
     public void ResetCounter()
     {
         numberOfBoxes = 0;
-        counterView.text = numberOfBoxes.ToString();
+        counterView.text = $"{numberOfBoxes} / {totalNumberOfBoxes}";
+    }
+
+    public string GetInfo()
+    {
+        return $"You collected {numberOfBoxes} / {totalNumberOfBoxes} boxes";
     }
 }

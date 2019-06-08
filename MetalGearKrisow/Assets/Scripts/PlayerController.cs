@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool IsDirectionToRight = true;
     private bool IsOnTheGround;
     private float Radius = 0.1f;
+    private bool isEnabled = true;
     public Transform startPoint;
     public AudioClip clip;
 
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isEnabled) return;
+
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("cactus_hit"))
         {
             Rigidbody2D.velocity = Vector2.zero;
@@ -70,8 +73,21 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.position = startPoint.position;
         }
     }
+
     public void OnBecameInvisible()
     {
         RestartPlayer();
+    }
+
+    public void Disable()
+    {
+        Rigidbody2D.velocity = Vector2.zero;
+        Animator.SetFloat("speed", 0);
+        isEnabled = false;
+    }
+
+    public void Enable()
+    {
+        isEnabled = true;
     }
 }

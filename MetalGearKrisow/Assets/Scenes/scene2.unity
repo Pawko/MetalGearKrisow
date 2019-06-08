@@ -543,6 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fec6a3da15fed841a9cbd2c6e64fcf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalNumberOfBoxes: 9
   counterView: {fileID: 913108217}
 --- !u!4 &70126866
 Transform:
@@ -5364,7 +5365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 227211909}
-  parallaxFactor: 5.93
+  parallaxFactor: 0.9
 --- !u!82 &935730037
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11653,8 +11654,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 445, y: 286}
-  m_SizeDelta: {x: 39.69, y: 39.68}
+  m_AnchoredPosition: {x: 478, y: 227.41}
+  m_SizeDelta: {x: 34.3, y: 36.084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047043290
 MonoBehaviour:
@@ -12920,5 +12921,10 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 227211909}
+    - target: {fileID: 8384760114993251274, guid: 3fb367dfd8eba4f4e925dd90566eeb6f,
+        type: 3}
+      propertyPath: parallaxFactor
+      value: 0.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb367dfd8eba4f4e925dd90566eeb6f, type: 3}
