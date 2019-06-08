@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     private Vector3 smoothVelocity = Vector3.zero;
     Animator animator;
     bool IsDirectionToRight = true;
+    bool HasFlipped = false;
 
     void Start()
     {
@@ -22,18 +23,32 @@ public class EnemyController : MonoBehaviour
 
     private void Flip()
     {
-        IsDirectionToRight = !IsDirectionToRight;
-        Vector3 playerScale = gameObject.transform.localScale;
-        playerScale.x *= -1;
-        gameObject.transform.localScale = playerScale;
+        if (IsDirectionToRight && HasFlipped)
+        {
+            IsDirectionToRight = !IsDirectionToRight;
+            HasFlipped = !HasFlipped;
+            Vector3 enemyScale = gameObject.transform.localScale;
+            enemyScale.x *= -1;
+            gameObject.transform.localScale = enemyScale;
+        }
     }
     //Call every frame
     void Update()
     {
         animator.SetInteger("AnimState", 0);
-        if (Vector3.Distance(transform.position, player.position) > 1f)
+        //if (Vector3.Distance(transform.position, player.position) > 1f)
+        //{
+        //    //Flip();
+        //}
+        if (player.position.x > transform.position.x)
         {
-            //Flip();
+            Flip();
+            HasFlipped = true;
+        }
+        else
+        {
+            IsDirectionToRight = true;
+            Flip();
         }
 
         float distance = Vector3.Distance(transform.position, player.position);
