@@ -15,18 +15,26 @@ public class PlayerController : MonoBehaviour
     private bool isEnabled = true;
     public Transform startPoint;
     public AudioClip clip;
-
+    private LifeController LifeController;
+    private bool isRestarting;
 
     // Start is called before the first frame update
     void Start()
     {
         Animator = GetComponent<Animator>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        LifeController = GetComponent<LifeController>();
+        isRestarting = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!LifeController.IsAnyLifeLeft())
+        {
+            gameObject.SetActive(false);
+        }
+
         if (!isEnabled) return;
 
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("cactus_hit"))
@@ -35,6 +43,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        isRestarting = false;
         IsOnTheGround = Physics2D.OverlapCircle(GroundDetector.position, Radius, LayerMask);
         float horizontalMove = Input.GetAxis("Horizontal");
         Rigidbody2D.velocity = new Vector2(horizontalMove * PlayerSpeed, Rigidbody2D.velocity.y);
@@ -68,6 +77,16 @@ public class PlayerController : MonoBehaviour
 
     public void RestartPlayer()
     {
+        if (isRestarting) return;
+
+        isRestarting = true;
+        bool isAnyLifeLeft = LifeController.DecrementLife();
+        if (!isAnyLifeLeft)
+        {
+            Disable();
+            LifeController.ShowGameOverPopUp();
+            return;
+        }
         if (startPoint != null)
         {
             gameObject.transform.position = startPoint.position;
@@ -76,6 +95,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnBecameInvisible()
     {
+        Debug.Log("on became invisible");
         RestartPlayer();
     }
 
