@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
     Animator animator;
     bool IsDirectionToRight = true;
     bool HasFlipped = false;
-    private readonly float distanceToAttack = 0.9f;
+    private readonly float distanceToAttack = 0.91f;
 
     void Start()
     {
