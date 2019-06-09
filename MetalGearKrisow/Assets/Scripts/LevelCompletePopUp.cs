@@ -40,7 +40,7 @@ public class LevelCompletePopUp : MonoBehaviour
     {
         popUpUI.SetActive(true);
         GameObject.Find("Girl").GetComponent<PlayerController>().Disable();
-        transform.Find("LevelCompleteInfo").GetComponent<Text>().text = "New levels cooming soon...";
+        transform.Find("LevelCompleteInfo").GetComponent<Text>().text = "New levels coming soon...";
         transform.Find("Button/Text").GetComponent<Text>().text = "Restart game";
     }
 
