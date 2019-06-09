@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     Animator animator;
     bool IsDirectionToRight = true;
     bool HasFlipped = false;
+    private readonly float distanceToAttack = 0.9f;
 
     void Start()
     {
@@ -53,14 +54,14 @@ public class EnemyController : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance < walkingDistance && distance > 1.3f)
+        if (distance < walkingDistance && distance > distanceToAttack)
         {
             animator.SetInteger("AnimState", 2);
             //Move the enemy towards the player with smoothdamp
             //transform.position = Vector3.SmoothDamp(transform.position, player.position, ref smoothVelocity, smoothTime);
             transform.position = Vector3.MoveTowards(transform.position, player.position, smoothTime * Time.deltaTime);
         }
-        if (distance < 1.3f)
+        if (distance <= distanceToAttack)
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("LightGuard_Attack"))
                 return;
