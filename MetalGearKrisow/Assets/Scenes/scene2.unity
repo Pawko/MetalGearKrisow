@@ -7375,7 +7375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03df2cc563223a341a4a62680ac360b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfLives: 3
+  NumberOfLives: 5
   lifeView: {fileID: 1574649525}
   GameOverPopUpUI: {fileID: 1777164693}
 --- !u!1001 &1321570479
